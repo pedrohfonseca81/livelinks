@@ -3,7 +3,6 @@ defmodule Livelinks.Accounts do
 
   alias Livelinks.Repo
   alias Livelinks.Accounts.User
-  alias Ecto.Changeset
 
   def list_users do
     Repo.all(User)
