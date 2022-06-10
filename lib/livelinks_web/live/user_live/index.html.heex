@@ -4,7 +4,7 @@
   <div class="flex justify-center">
     <div class="rounded overflow-hidden shadow-lg w-1/2">
         <%= for x <- @links do %>
-        <div class="px-6 py-4 flex justify-between">
+        <div class="px-6 py-4 flex flex-wrap justify-between">
           <div class="font-bold text-xl mb-2"><%= x.name %></div>
           <a class="bg-blue-500 text-white font-bold py-2 px-4 rounded" target="_blank" href={x.uri}>
             Go to
