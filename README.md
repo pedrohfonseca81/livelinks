@@ -1,6 +1,6 @@
 # Livelinks
 
-Livelinks is a linktr based website made with Phoenix LiveView.
+Livelinks is a linktree based website made with Phoenix LiveView.
 
 ## Screenshots
 
