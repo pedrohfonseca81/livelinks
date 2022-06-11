@@ -2,6 +2,8 @@ defmodule Livelinks.Accounts.User do
   use Ecto.Schema
   import Ecto.Changeset
 
+  alias Livelinks.Repo
+
   schema "users" do
     field :password, :string
     field :username, :string
@@ -12,9 +14,11 @@ defmodule Livelinks.Accounts.User do
   end
 
   @doc false
-  def changeset(user, attrs) do
+  def changeset(user, attrs \\ %{}) do
     user
     |> cast(attrs, [:username, :password])
     |> validate_required([:username, :password])
+    |> unique_constraint(:username)
+    |> unsafe_validate_unique(:username, Repo)
   end
 end
