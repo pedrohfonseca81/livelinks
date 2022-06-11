@@ -12,9 +12,9 @@ defmodule Livelinks.Links.Link do
   end
 
   @doc false
-  def changeset(user, attrs) do
+  def changeset(user, attrs \\ %{}) do
     user
-    |> cast(attrs, [:username, :password])
-    |> validate_required([:username, :password])
+    |> cast(attrs, [:name, :uri])
+    |> validate_required([:name, :uri])
   end
 end
