@@ -4,7 +4,7 @@ defmodule Livelinks.Repo.Migrations.CreateUsers do
   def change do
     create table(:users) do
       add :username, :string
-      add :password, :string
+      add :password_hash, :string
 
       timestamps()
     end
