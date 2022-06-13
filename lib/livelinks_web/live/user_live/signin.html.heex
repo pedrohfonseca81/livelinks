@@ -1,0 +1,13 @@
+<main class="flex justify-center mt-4">
+  <div class="flex flex-col justify-center items-center rounded overflow-hidden w-2/5 shadow-lg">
+    <.form class="flex flex-col justify-center items-center w-4/5 mt-3" let={f} for={@changeset} phx-submit="submit">
+      <%= error_tag f, :username %>
+      <%= text_input f, :username, autocomplete: :off, class: "w-3/4 appearance-none shadow border-transparent focus:border-transparent focus:ring-0 rounded py-2 px-4 text-gray-700 leading-tight mb-3", placeholder: "Username" %>
+
+      <%= error_tag f, :password %>
+      <%= password_input f, :password, class: "w-3/4 appearance-none shadow border-transparent focus:border-transparent focus:ring-0 rounded py-2 px-4 text-gray-700 leading-tight mb-3", placeholder: "Password" %>
+
+      <%= submit "Submit", class: "bg-blue-500 text-white font-bold py-2 px-4 rounded w-3/4 mb-3" %>
+    </.form>
+  </div>
+</main>

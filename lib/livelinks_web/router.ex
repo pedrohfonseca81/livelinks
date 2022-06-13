@@ -18,6 +18,7 @@ defmodule LivelinksWeb.Router do
     pipe_through :browser
 
     live "/@:username", LivelinksWeb.UserLive.Index, :index
+    live "/signin", LivelinksWeb.UserLive.Signin, :signin
     live "/signup", LivelinksWeb.UserLive.Signup, :signup
   end
 

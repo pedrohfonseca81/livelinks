@@ -5,9 +5,10 @@ defmodule LivelinksWeb.Endpoint do
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
-    store: :cookie,
-    key: "_livelinks_key",
-    signing_salt: "bhXeC4va"
+    store: PhoenixLiveSession,
+    pub_sub: Livelinks.PubSub,
+    signing_salt: "some-random-salt",
+    key: "session"
   ]
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]

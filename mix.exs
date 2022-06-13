@@ -50,7 +50,8 @@ defmodule Livelinks.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:tailwind, "~> 0.1", runtime: Mix.env() == :dev},
-      {:argon2_elixir, "~> 3.0.0"}
+      {:argon2_elixir, "~> 3.0.0"},
+      {:phoenix_live_session, "~> 0.1"}
     ]
   end
 
